@@ -1,0 +1,26 @@
+---
+title: "WordCloud_Trial"
+output: html_document
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r}
+library(wordcloud2)
+library(here)
+library(rio)
+```
+
+## WordCloud 1
+```{r echo=FALSE, message=FALSE}
+s1 <- import(here("data", "set1.xlsx"))
+wordcloud2(s1, color = "random-light", backgroundColor = "dark")
+```
+
+## WordCloud 2
+```{r echo=FALSE, message=FALSE}
+s2 <- import(here("data", "set2.xlsx"))
+wordcloud2(s2, color = "random-light", backgroundColor = "dark")
+```
